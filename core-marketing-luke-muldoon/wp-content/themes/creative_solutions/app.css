@@ -12132,10 +12132,10 @@ footer .footerLinks #circle {
 #team {
   padding-top: calc(50px + 8vw);
   padding-bottom: calc(50px + 8vw);
+  overflow: hidden;
 }
 #team #profiles {
   padding-top: 100px;
-  overflow: hidden;
 }
 #team #profiles .profile {
   padding: 0 100px;

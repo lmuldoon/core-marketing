@@ -140,9 +140,9 @@
 #team {
     padding-top:calc(50px + 8vw);
     padding-bottom:calc(50px + 8vw);
+    overflow:hidden;
     #profiles {
         padding-top:100px;
-        overflow:hidden;
         .profile {
             padding:0 100px;
             img {
