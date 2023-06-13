@@ -5,18 +5,27 @@ import 'slick-carousel';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { toggleBurger, toggleFilter, filterProjects } from './functions.js';
 gsap.registerPlugin(ScrollTrigger);
-document.getElementById('toggleBurger').addEventListener('click', toggleBurger);
-document.getElementById('filterBtn').addEventListener('click', toggleFilter);
-document.addEventListener('DOMContentLoaded', function() {
-    var categoriesList = document.getElementById('categoriesList');
-    categoriesList.addEventListener('click', function(event) {
-        var target = event.target;
-        if (target.tagName === 'A') {
-            var category = target.getAttribute('data-category');
-            filterProjects(category);
-        }
+var toggleBurgerElement = document.getElementById('toggleBurger');
+if (toggleBurgerElement) {
+  toggleBurgerElement.addEventListener('click', toggleBurger);
+}
+var filterBtnElement = document.getElementById('filterBtn');
+if (filterBtnElement) {
+    document.getElementById('filterBtn').addEventListener('click', toggleFilter);
+}
+var categoriesListElement = document.getElementById('categoriesList');
+if (categoriesListElement) {
+    document.addEventListener('DOMContentLoaded', function() {
+        var categoriesList = document.getElementById('categoriesList');
+        categoriesList.addEventListener('click', function(event) {
+            var target = event.target;
+            if (target.tagName === 'A') {
+                var category = target.getAttribute('data-category');
+                filterProjects(category);
+            }
+        });
     });
-});
+}
 
 jQuery(document).ready(function () {
   jQuery('#services .carousel').slick({
