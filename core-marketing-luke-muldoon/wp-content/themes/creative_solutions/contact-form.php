@@ -1,4 +1,4 @@
-<div id="parallax" style="background-image:<?php echo get_field('parallax_image'); ?>"></div>
+<div id="parallax" style="background-image:url(<?php echo get_field('parallax_image'); ?>);"></div>
 <section id="contact" class="darkBg">
         <div class="container">
             <div class="d-flex justify-content-between align-items-start">

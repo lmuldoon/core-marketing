@@ -11962,7 +11962,7 @@ header nav .headerRight ul {
 
 #parallax {
   background-image: url(../../../wp-content/themes/creative_solutions/images/footer.jpg);
-  min-height: 100%;
+  min-height: 100vh;
   width: 100%;
   background-attachment: fixed;
   background-position: center;
