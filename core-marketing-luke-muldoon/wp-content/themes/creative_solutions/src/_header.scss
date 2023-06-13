@@ -1,0 +1,50 @@
+header {
+    padding:20px;
+    width:100%;
+    /*position:sticky Replaced because hero section is 100vh*/
+    position:fixed;
+    top:0;
+    left:0;
+    background:$black;
+    z-index:2;
+    nav {
+        ul {
+            list-style:none;
+            display: flex;
+            transition: all 1s;
+            opacity: 1;
+            li {
+                margin:0 0 0 72px;
+                display:block;
+                a {
+                    color:$white;
+                    text-decoration:none;
+                    font-family:"Montserrat Bold";
+                    font-size:20px;
+                    text-transform:uppercase;
+                }
+                a:hover {
+                    color:$green;
+                }
+            }
+        }
+        .socialIcon {
+            margin:0 0 0 20px;
+            img {
+            width:31px;
+            height:31px;
+            display:block;
+            }
+            #fbPath, #igPath {
+                fill:$white;
+            }
+        }
+        .headerRight {
+            
+            ul {
+            margin:0 72px 0 0;
+            }
+        }
+            
+    }
+}

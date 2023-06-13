@@ -1,0 +1,152 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "colours.scss";
+@import "fonts.scss";
+@import "transitions.scss";
+@import "header.scss";
+@import "footer.scss";
+@import "home.scss";
+@import "page.scss";
+@import "staticpage.scss";
+@import "togglemenu.scss";
+
+body, html {
+    height: 100%;
+}
+body {
+    background:$white;
+    scroll-behavior: smooth;
+}
+
+section {
+    position: relative;
+}
+
+.container {
+    max-width:1280px;
+} 
+
+h1 {
+    font-family:"Montserrat Black";
+    font-size: 1.8rem;
+    font-size: clamp(1.8rem, 1.3666666666666667rem + 2.166666666666667vw, 3.1rem);
+    line-height:1.4;
+}
+
+h2 {
+    font-family:"Montserrat Bold";
+    margin-bottom:50px;
+    font-size: 2.75rem;
+font-size: clamp(2.75rem, 2.4166666666666665rem + 1.6666666666666667vw, 3.75rem);
+line-height:1.1;
+}
+h3 {
+    font-family:"Montserrat Bold";
+    margin-bottom:30px;
+    font-size: 2.75rem;
+    font-size: 1.75rem;
+font-size: clamp(1.75rem, 1.6041666666666667rem + 0.7291666666666666vw, 2.1875rem);
+line-height:1.1;
+}
+h4 {
+    font-family:"Montserrat Bold";
+    margin-bottom:35px;
+    font-size: 1.3125rem;
+    font-size: clamp(1.3125rem, 1.1666666666666667rem + 0.7291666666666666vw, 1.75rem);
+}
+h5 {
+    font-family:"Montserrat Bold";
+    font-size: 1.125rem;
+font-size: clamp(1.125rem, 1.0416666666666667rem + 0.4166666666666667vw, 1.375rem);
+line-height:1.1;
+}
+
+h6 {
+    font-family:"Montserrat Medium";
+    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 1.375rem + 0.625vw, 1.875rem);
+}
+
+p {
+    font-family:"Montserrat Regular";
+    font-size: 1rem;
+font-size: clamp(1rem, 0.8666666666666667rem + 0.6666666666666665vw, 1.4rem);
+line-height:2;
+color:$black;
+}
+.xsmallText {
+    font-size: 0.9375rem;
+    font-size: clamp(0.9375rem, 0.875rem + 0.3125vw, 1.125rem);
+    line-height:1.4;
+}
+.smallText {
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.9166666666666666rem + 0.4166666666666667vw, 1.25rem);
+    line-height:2;
+}
+.mediumText {
+    font-family:"Montserrat Medium";
+    font-size: 1.125rem;
+    font-size: clamp(1.125rem, 0.9791666666666666rem + 0.7291666666666666vw, 1.5625rem);
+}
+
+
+p.largeCopy {
+    line-height:1.6;
+    font-size: 1.7rem;
+    font-size: clamp(1.7rem, 1.5333333333333332rem + 0.8333333333333337vw, 2.2rem); 
+}
+
+.btn {
+    align-items:center;
+    justify-content: center;
+    border-radius: 40px;
+padding:7px 20px;
+border:none;
+font-family:"Montserrat Bold";
+font-size: 1rem;
+font-size: clamp(1rem, 0.8666666666666667rem + 0.6666666666666665vw, 1.4rem);
+width: max-content;
+transition:all 1s;
+}
+
+.btn-primary {
+    color:$white;
+    background:$pink;
+    .arrow {
+        fill:$white;
+    }
+}
+
+.btn-white {
+    background:$white;
+}
+
+.btn:hover,.btn:active,.btn-primary:hover,.btn-primary:active {
+    background:$green !important;
+}
+
+.btnArrow {
+margin-left:12px;
+margin-right:-10px;
+}
+
+.darkBg {
+    background-color:$black;
+    background-image: url(../../../wp-content/themes/creative_solutions/images/logo_bg.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    h1,h2,p {
+        color:$white;
+    }
+}
+
+.greyBg {
+    background-color:$grey;
+    h1,h2,p {
+        color:$black;
+    }
+}
+
+.footerTextColour {
+    color:$footerTextColour;
+}

@@ -1,0 +1,163 @@
+#hero {
+    min-height:100vh;
+    padding-top:95px;
+    background:$black;
+    .heroText {
+        h1 {
+            color:$green;
+            span {
+                color:$white;
+                font-size: 3.2rem;
+                font-size: clamp(3.2rem, 2.5rem + 3.4999999999999996vw, 5.3rem);
+                line-height:1.1;
+            }
+        }
+        p {
+            color:$white;
+            font-size: 1.1rem;
+            font-size: clamp(1.1rem, 0.9466666666666668rem + 0.7666666666666666vw, 1.56rem);
+            line-height:1.4;
+            margin:0 0 40px;
+        }
+    }
+    @media screen and (max-width:991px) {
+        img {
+            max-height:50vh
+        }
+    }
+}
+
+#about {
+    padding-top:calc(50px + 8vw);
+    padding-bottom:calc(50px + 8vw);
+    #services {
+        margin:100px 0 0;
+        overflow:hidden;
+        .service {
+            margin:0 20px;
+        }
+        .slick-arrow {
+            background-image: url(../../../wp-content/themes/creative_solutions/images/arrow_pink.svg);
+            text-indent:-999999px;
+            width:70px;
+            height:70px;
+            background-size:cover;
+            background-color:transparent;
+            border:none;
+        }
+        .slick-prev {
+            transform:rotate(180deg);
+            margin-right:10px;
+        }
+    }
+}
+
+#work {
+    .workHead {
+            padding-top: calc(50px + 8vw);
+            padding-bottom: clamp(230px, 220px + 1.8vw, 320px);
+        #filter {
+            position:relative;
+            .filterBtn {
+                background:$white;
+                .btnArrow {
+                transform:rotate(90deg);
+                }
+            }
+            ul {
+                position: absolute;
+                top: 100%;
+                transform: scale(0);
+                right: 0;
+                margin: 0;
+                padding: 10px 20px;
+                min-width: 100%;
+                background: #ffffff;
+                border-radius: 40px;
+                text-align: left;
+                list-style: none;
+                font-family: "Montserrat Bold";
+                transition: all 0.5s;
+                transform-origin: center top;
+                opacity: 0;
+                li {
+                    margin:10px 0;
+                    a {
+                        font-family: "Montserrat Regular";
+                        color:$black;
+                        text-decoration:none;
+                        font-size: clamp(1rem, 0.8666666667rem + 0.6666666667vw, 1.3rem);
+                        cursor:pointer;
+                    }
+                }
+            }
+        }
+        #filter.open {
+            .btnArrow {
+                transform:rotate(-90deg);
+            }
+            ul {
+            opacity:1;
+            transform: scale(1);
+            }
+        }
+    }
+    #works {
+        padding-bottom:100px;
+        margin-top:clamp(-165px, -165px - 1.8vw, -230px);
+        .work {
+            display:flex;
+            .projectImage {
+                position:relative;
+                border-radius:0 0 100px 0;
+                overflow:hidden;
+                img {
+                    transition: all 1s linear;
+                }
+            }
+
+            .projectImage:hover {
+                img {
+                    scale:1.1;
+                }
+            }
+                
+            .projectCategory {
+            position:absolute;
+            top:0;
+            right:0;
+            font-family: "Montserrat Medium";
+            font-size: 0.875rem;
+            font-size: clamp(0.875rem, 0.8333333333333334rem + 0.20833333333333334vw, 1rem);
+            padding:5px 20px;
+            background:$green;
+            border-radius:0 0 0 21px
+            }
+        }
+    }
+}
+
+#team {
+    padding-top:calc(50px + 8vw);
+    padding-bottom:calc(50px + 8vw);
+    #profiles {
+        padding-top:100px;
+        overflow:hidden;
+        .profile {
+            padding:0 100px;
+            img {
+                transition:all .5s;
+            }
+        }
+        .profile:hover {
+            img {
+            transform:scale(1.07);
+            }
+        }
+
+        .row {
+            margin-left:-100px;
+            margin-right:-100px;
+        }
+    }
+}

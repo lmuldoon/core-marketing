@@ -1,0 +1,61 @@
+.footerImg {
+    width:100%;
+}
+#contact {
+    padding-top:calc(50px + 8vw);
+    padding-bottom:calc(50px + 8vw);
+    .form-control {
+        border-radius:40px;
+        padding:1.2rem 1.5rem;
+        height: 4rem;
+        resize:none;
+        font-family:"Montserrat Medium";
+        color:$footerTextColour;
+    }
+        
+    label {
+        display:none;
+    }
+}
+#parallax {
+  background-image:  url(../../../wp-content/themes/creative_solutions/images/footer.jpg);
+    min-height: 100%;
+    width:100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+footer {
+    padding-top:calc(50px + 8vw);
+    padding-bottom:calc(50px + 8vw);
+    .logoFooter {
+        display:block;
+    }
+    .socialIcon {
+        margin:0 0 0 20px;
+        #fbPath, #igPath {
+            fill:$black;
+        }
+    }
+    .footerMenu {
+        list-style:none;
+        padding:0;
+        margin:0;
+        }
+        
+        .footerLinks {
+            a {
+            color:$footerTextColour;
+            text-decoration:none;
+            font-size: 1rem;
+                    font-size: clamp(1rem, 0.9166666666666666rem + 0.4166666666666667vw, 1.25rem);
+                    line-height:2;
+                    font-family: "Montserrat Regular";
+            }
+        
+            #circle {
+            margin:2px 20px 0;
+            }
+        }
+}
