@@ -92,7 +92,7 @@
             <div class="d-flex justify-content-between align-items-start">
                 <h2 class="headerScale"><?php echo get_field('work_title'); ?></h2>
                 <div id="filter">
-                    <button class="btn filterBtn" onclick="toggleFilter();"><?php echo get_field('filter_button_text'); ?>
+                    <button class="btn filterBtn" id="filterBtn"><?php echo get_field('filter_button_text'); ?>
                         <svg class="btnArrow" xmlns="http://www.w3.org/2000/svg" width="39.336" height="39.336" viewBox="0 0 39.336 39.336">
                             <path class="arrow" data-name="Path 1463" d="M19.668,0A19.668,19.668,0,1,0,39.336,19.668,19.668,19.668,0,0,0,19.668,0ZM15.722,13.78a1.788,1.788,0,1,1,2.528-2.528L25.4,18.4a1.788,1.788,0,0,1,0,2.528L18.25,28.084a1.788,1.788,0,1,1-2.528-2.528l5.888-5.888Z" fill-rule="evenodd"/>
                         </svg>
@@ -100,17 +100,19 @@
                     <?php 
                         $taxonomy = 'categories';
                         $categories = get_terms($taxonomy); // Get all terms of a taxonomy
-
-                        if ( $categories && !is_wp_error( $categories ) ) :
-                            echo '<ul>';?>
-                            <li><a onclick="filterProjects('all');">All</a></li>
-                            <?php
-                            foreach ( $categories as $category ) { ?>
-                                        <li><a onclick="filterProjects('<?php echo $category->name; ?>');"><?php echo $category->name; ?></a></li>
-                            <?php } 
-                            echo '</ul>';
-                        endif;
                     ?>
+                    <ul id="categoriesList">
+                        <li><a data-category="all">All</a></li>
+                        <?php
+                        if ($categories && !is_wp_error($categories)) {
+                            foreach ($categories as $category) {
+                            $categoryName = $category->name;
+                            echo "<li><a data-category=\"$categoryName\">$categoryName</a></li>";
+                            }
+                        }
+                        ?>
+                    </ul>
+
                 </div>
             </div>
             <div class="row">
