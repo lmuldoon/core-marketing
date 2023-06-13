@@ -1,8 +1,3 @@
-import { gsap } from "gsap";
-import jQuery from "jquery";
-window.$ = window.jQuery = jQuery;
-import 'slick-carousel';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 jQuery(document).ready(function () {
@@ -29,6 +24,7 @@ jQuery(document).ready(function () {
 
 });
 
+/*****TOGGLE BURGER******/
 function toggleBurger() {
   document.getElementById('toggleBurger').classList.toggle("open");
   document.getElementById("toggleMenu").classList.toggle("Open");
@@ -40,7 +36,7 @@ var elements = document.querySelectorAll("#toggleMenu a");
 for (var i = 0; i < elements.length; i++) {
   elements[i].addEventListener('click', toggleBurger, false);
 }
-
+/*****TOGGLE FILTER******/
 function toggleFilter() {
   document.getElementById('filter').classList.toggle("open");
 }
@@ -49,7 +45,7 @@ var filterElements = document.querySelectorAll("#filter a");
 for (var i = 0; i < filterElements.length; i++) {
   filterElements[i].addEventListener('click', toggleFilter, false);
 }
-
+/*****FILTER PROJECTS******/
 function filterProjects(category) {
   category = category.toLowerCase();
   var postItems = document.getElementsByClassName('workInner');
